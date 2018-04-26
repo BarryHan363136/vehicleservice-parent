@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="vehicleservice-common" />
+        <module name="vehicleservice-datasource" />
+        <module name="vehicleservice-dianping" />
+        <module name="vehicleservice-dzhstock" />
+        <module name="vehicleservice-images" />
+        <module name="vehicleservice-news" />
+        <module name="vehicleservice-share" />
+        <module name="vehicleservice-weather" />
+        <module name="vehicleservice-webchat" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="vehicleservice-common" target="1.8" />
+      <module name="vehicleservice-datasource" target="1.8" />
+      <module name="vehicleservice-dianping" target="1.8" />
+      <module name="vehicleservice-dzhstock" target="1.8" />
+      <module name="vehicleservice-images" target="1.8" />
+      <module name="vehicleservice-news" target="1.8" />
+      <module name="vehicleservice-parent" target="1.8" />
+      <module name="vehicleservice-share" target="1.8" />
+      <module name="vehicleservice-weather" target="1.8" />
+      <module name="vehicleservice-webchat" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
