@@ -2,7 +2,6 @@
 /Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/utils/PropertieUtil.java
 /Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/parse/json/JsonUtils.java
 /Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/id/IdGenerateException.java
-/Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/mapper/BaseMapper.java
 /Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/model/HttpClentResponseModel.java
 /Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/service/impl/HttpClientServiceImpl.java
 /Users/hantongshan/workspace-directory/bmw/vehicleservice-parent/vehicleservice-common/src/main/java/com/bmw/vehicleservice/utils/FileOperationUtil.java

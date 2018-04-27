@@ -3,7 +3,6 @@ com/bmw/vehicleservice/service/impl/HttpClientServiceImpl.class
 com/bmw/vehicleservice/utils/DateUtils.class
 com/bmw/vehicleservice/parse/xml/JaxbUtil$CollectionWrapper.class
 com/bmw/vehicleservice/utils/PropertieUtil.class
-com/bmw/vehicleservice/mapper/BaseMapper.class
 com/bmw/vehicleservice/service/HttpClientService.class
 com/bmw/vehicleservice/utils/MD5Utils.class
 com/bmw/vehicleservice/utils/ZipUtil.class

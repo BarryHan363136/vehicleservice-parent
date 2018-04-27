@@ -12,6 +12,7 @@
         <module name="vehicleservice-dzhstock" />
         <module name="vehicleservice-images" />
         <module name="vehicleservice-news" />
+        <module name="vehicleservice-redis" />
         <module name="vehicleservice-share" />
         <module name="vehicleservice-weather" />
         <module name="vehicleservice-webchat" />
@@ -25,6 +26,7 @@
       <module name="vehicleservice-images" target="1.8" />
       <module name="vehicleservice-news" target="1.8" />
       <module name="vehicleservice-parent" target="1.8" />
+      <module name="vehicleservice-redis" target="1.8" />
       <module name="vehicleservice-share" target="1.8" />
       <module name="vehicleservice-weather" target="1.8" />
       <module name="vehicleservice-webchat" target="1.8" />

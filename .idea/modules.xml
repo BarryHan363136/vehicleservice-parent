@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/vehicleservice-images/vehicleservice-images.iml" filepath="$PROJECT_DIR$/vehicleservice-images/vehicleservice-images.iml" />
       <module fileurl="file://$PROJECT_DIR$/vehicleservice-news/vehicleservice-news.iml" filepath="$PROJECT_DIR$/vehicleservice-news/vehicleservice-news.iml" />
       <module fileurl="file://$PROJECT_DIR$/vehicleservice-parent.iml" filepath="$PROJECT_DIR$/vehicleservice-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vehicleservice-redis/vehicleservice-redis.iml" filepath="$PROJECT_DIR$/vehicleservice-redis/vehicleservice-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/vehicleservice-share/vehicleservice-share.iml" filepath="$PROJECT_DIR$/vehicleservice-share/vehicleservice-share.iml" />
       <module fileurl="file://$PROJECT_DIR$/vehicleservice-weather/vehicleservice-weather.iml" filepath="$PROJECT_DIR$/vehicleservice-weather/vehicleservice-weather.iml" />
       <module fileurl="file://$PROJECT_DIR$/vehicleservice-webchat/vehicleservice-webchat.iml" filepath="$PROJECT_DIR$/vehicleservice-webchat/vehicleservice-webchat.iml" />

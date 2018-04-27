@@ -1,7 +1,6 @@
 package com.bmw.vehicleservice.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.bmw.vehicleservice.utils.PropertieUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -18,6 +17,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Map;
+import java.util.Properties;
+
 /**
  * 描述: 数据源实现
  *
@@ -28,6 +32,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 public class DataSourceConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(DataSourceConfiguration.class);
+    public static final String PARAS_CONFIG_FILENAME = "application.properties";
+    protected static final Properties properties = new Properties();
 
     /**
      * 数据源配置相关参数设置
@@ -39,16 +45,52 @@ public class DataSourceConfiguration {
     private Integer initialSize;
     private Integer minIdle;
     private Integer maxActive;
+    /**
+     * mybatis扫描ORM映射文件路径、实体类路径、dao层路径
+     * */
+    private String mapperLocations;
+    private String typeAliasesPackage;
+    private String daoBasePackage;
 
     public DataSourceConfiguration(){
         logger.info("初始化数据源服务配置...");
-        this.driverClassName = new String(PropertieUtil.getProperty("jdbc.driverClassName"));
-        this.driverUrl = new String(PropertieUtil.getProperty("jdbc.url"));
-        this.driverUsername = new String(PropertieUtil.getProperty("jdbc.username"));
-        this.driverPassword = new String(PropertieUtil.getProperty("jdbc.password"));
-        this.initialSize = StringUtils.isNotBlank(PropertieUtil.getProperty("jdbc.initialsize")) ? Integer.parseInt(PropertieUtil.getProperty("jdbc.initialsize")) : 10;
-        this.minIdle = StringUtils.isNotBlank(PropertieUtil.getProperty("jdbc.minidle")) ? Integer.parseInt(PropertieUtil.getProperty("jdbc.minidle")) : 10;
-        this.maxActive = StringUtils.isNotBlank(PropertieUtil.getProperty("jdbc.maxactive")) ? Integer.parseInt(PropertieUtil.getProperty("jdbc.maxactive")) : 100;
+        try {
+            /**
+             * 1.从系统环境变量中获取数据源配置参数，如果获取不到就从配置文件中获取
+             * */
+            Map<String,String> map = System.getenv();
+            this.driverClassName = map.get("jdbc.driverClassName");
+            this.driverUrl = map.get("jdbc.url");
+            this.driverUsername = map.get("jdbc.username");
+            this.driverPassword = map.get("jdbc.password");
+            this.initialSize = StringUtils.isNotBlank(map.get("jdbc.initialsize")) ? Integer.parseInt(map.get("jdbc.initialsize")) : 10;
+            this.minIdle = StringUtils.isNotBlank(map.get("jdbc.minidle")) ? Integer.parseInt(map.get("jdbc.minidle")) : 10;
+            this.maxActive = StringUtils.isNotBlank(map.get("jdbc.maxactive")) ? Integer.parseInt(map.get("jdbc.maxactive")) : 100;
+            this.typeAliasesPackage = StringUtils.isNotBlank(map.get("mybatis.entityScannerPath")) ? map.get("mybatis.entityScannerPath") : "com.bmw.vehicleservice.entity";
+            this.mapperLocations = StringUtils.isNotBlank(map.get("mybatis.mappingsScannerPath")) ? map.get("mybatis.mappingsScannerPath") : "classpath:com/bmw/vehicleservice/mappings/*.xml";
+            this.daoBasePackage = StringUtils.isNotBlank(map.get("mybatis.daoScannerPath")) ? map.get("mybatis.daoScannerPath") : "com.bmw.vehicleservice.mapper";
+            /**
+             * 2.从配置文件中获取数据源配置参数
+             * */
+            if (StringUtils.isBlank(driverClassName) ||
+                    StringUtils.isBlank(driverUrl) ||
+                    StringUtils.isBlank(driverUsername) ||
+                    StringUtils.isBlank(driverPassword) || StringUtils.isBlank(typeAliasesPackage) ||
+                    StringUtils.isBlank(mapperLocations) || StringUtils.isBlank(daoBasePackage)){
+                logger.warn("<=====从配置文件中获取数据源配置参数,系统环境变量未设置数据源参数!!!=====>");
+                InputStream in = this.getClass().getClassLoader().getResourceAsStream(PARAS_CONFIG_FILENAME);
+                if (in!=null){
+                    properties.load(in);
+                }
+                this.driverClassName = properties.getProperty("jdbc.driverClassName");
+                this.driverUrl = properties.getProperty("jdbc.url");
+                this.driverUsername = properties.getProperty("jdbc.username");
+                this.driverPassword = properties.getProperty("jdbc.password");
+            }
+        } catch (IOException e) {
+            logger.error("DataSourceConfiguration初始化失败 {} ", e);
+        }
+
     }
 
     @Bean(name = "dataSource", initMethod = "init", destroyMethod = "close")
@@ -114,10 +156,10 @@ public class DataSourceConfiguration {
         /** 设置datasource */
         sqlSessionFactoryBean.setDataSource(dataSource());
         /** 设置typeAlias 包扫描路径即实体类路径 */
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.bmw.vehicleservice.entity");
+        sqlSessionFactoryBean.setTypeAliasesPackage(this.typeAliasesPackage);
         /** 设置mybatis configuration 扫描路径 */
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:com/bmw/vehicleservice/mappings/*.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources(this.mapperLocations));
         return sqlSessionFactoryBean;
     }
 
@@ -125,7 +167,8 @@ public class DataSourceConfiguration {
     public MapperScannerConfigurer getMapperScannerConfigurer() throws Exception {
         MapperScannerConfigurer scannerConfigurer = new MapperScannerConfigurer();
         scannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-        scannerConfigurer.setBasePackage("com.bmw.vehicleservice.mapper");
+        /** 设置dao层扫描路径 */
+        scannerConfigurer.setBasePackage(this.daoBasePackage);
         return scannerConfigurer;
     }
 

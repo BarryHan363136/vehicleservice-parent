@@ -1,6 +1,11 @@
 package com.bmw.vehicleservice.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+    private static final long serialVersionUID = -5164102540549630747L;
+
     private String userid;
 
     private String username;
