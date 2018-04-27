@@ -1,115 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da850d2c-7841-46af-ac8d-8a6f463e1d92" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-common/target/classes/com/bmw/vehicleservice/mapper/BaseMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/src/main/java/com/bmw/vehicleservice/config/DataSourceConfiguration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/com/bmw/vehicleservice/config/DataSourceConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/config/DataSourceConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/controller/UserController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/entity/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/mapper/UserMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/mappings/UserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/service/UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/com/bmw/vehicleservice/service/impl/UserServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/logback.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/spring/mvc-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/spring/spring-common.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/classes/spring/spring.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/ant-1.6.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/aspectjrt-1.8.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/aspectjweaver-1.8.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-beanutils-1.9.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-digester-1.8.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-exec-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-fileupload-1.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-io-1.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-lang3-3.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-math-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/commons-validator-1.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/curator-client-2.10.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/curator-framework-2.10.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/curator-recipes-2.10.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/curator-test-2.10.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/druid-1.1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/elastic-job-common-core-2.0.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/elastic-job-lite-core-2.0.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/elastic-job-lite-spring-2.0.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/fluent-logger-0.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/gson-2.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/guava-18.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/httpclient-4.5.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/httpcore-4.4.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jackson-annotations-2.9.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jackson-core-2.9.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jackson-databind-2.9.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/javassist-3.16.1-GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jline-0.9.94.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/json-simple-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/log4j-1.2.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/log4j-over-slf4j-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/logback-classic-1.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/logback-core-1.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/lombok-1.16.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/msgpack-0.6.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/mybatis-3.4.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/mybatis-spring-1.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/mysql-connector-java-5.1.46.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/netty-3.7.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/quartz-2.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/slf4j-api-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-aop-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-beans-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-context-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-core-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-expression-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-jdbc-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-tx-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-web-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/spring-webmvc-4.3.16.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/vehicleservice-common-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/lib/zookeeper-3.4.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/webchat/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-common/target/vehicleservice-common-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/vehicleservice-common/target/vehicleservice-common-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/test-classes/com/bmw/vehicleservice/service/UserServiceTest.class" afterPath="$PROJECT_DIR$/vehicleservice-webchat/target/test-classes/com/bmw/vehicleservice/service/UserServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/vehicleservice_webchat_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/vehicleservice_webchat_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="da850d2c-7841-46af-ac8d-8a6f463e1d92" name="Default" comment="integrate redis">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/src/main/java/com/bmw/vehicleservice/config/RedisConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/src/main/java/com/bmw/vehicleservice/service/RedisService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/src/main/java/com/bmw/vehicleservice/service/impl/RedisServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-webchat/src/test/java/com/bmw/vehicleservice/service/RedisServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/com/bmw/vehicleservice/entity/User.class" afterPath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/com/bmw/vehicleservice/entity/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/vehicleservice-common/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/vehicleservice-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/vehicleservice-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-common/vehicleservice-common.iml" afterPath="$PROJECT_DIR$/vehicleservice-common/vehicleservice-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-datasource/pom.xml" afterPath="$PROJECT_DIR$/vehicleservice-datasource/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-datasource/src/main/java/com/bmw/vehicleservice/config/DataSourceConfiguration.java" afterPath="$PROJECT_DIR$/vehicleservice-datasource/src/main/java/com/bmw/vehicleservice/config/DataSourceConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-datasource/vehicleservice-datasource.iml" afterPath="$PROJECT_DIR$/vehicleservice-datasource/vehicleservice-datasource.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-dianping/vehicleservice-dianping.iml" afterPath="$PROJECT_DIR$/vehicleservice-dianping/vehicleservice-dianping.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-dzhstock/vehicleservice-dzhstock.iml" afterPath="$PROJECT_DIR$/vehicleservice-dzhstock/vehicleservice-dzhstock.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-images/vehicleservice-images.iml" afterPath="$PROJECT_DIR$/vehicleservice-images/vehicleservice-images.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-news/vehicleservice-news.iml" afterPath="$PROJECT_DIR$/vehicleservice-news/vehicleservice-news.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-parent.iml" afterPath="$PROJECT_DIR$/vehicleservice-parent.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-share/vehicleservice-share.iml" afterPath="$PROJECT_DIR$/vehicleservice-share/vehicleservice-share.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-weather/vehicleservice-weather.iml" afterPath="$PROJECT_DIR$/vehicleservice-weather/vehicleservice-weather.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/pom.xml" afterPath="$PROJECT_DIR$/vehicleservice-webchat/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/src/main/java/com/bmw/vehicleservice/entity/User.java" afterPath="$PROJECT_DIR$/vehicleservice-webchat/src/main/java/com/bmw/vehicleservice/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/vehicleservice-webchat/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/src/test/java/com/bmw/vehicleservice/service/UserServiceTest.java" afterPath="$PROJECT_DIR$/vehicleservice-webchat/src/test/java/com/bmw/vehicleservice/service/UserServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/application.properties" afterPath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/vehicleservice-webchat.iml" afterPath="$PROJECT_DIR$/vehicleservice-webchat/vehicleservice-webchat.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -141,18 +40,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vehicleservice-webchat/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -374,11 +262,11 @@
       <recent name="com.bmw.vehicleservice.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/vehicleservice-common/src/main/resources" />
       <recent name="$PROJECT_DIR$/vehicleservice-datasource/src/main/resources" />
       <recent name="$PROJECT_DIR$/vehicleservice-webchat/src/main/resources/com/bmw/vehicleservice/mappings" />
       <recent name="$PROJECT_DIR$/vehicleservice-webchat/src/main/java/com/bmw/vehicleservice/mapper" />
-      <recent name="$PROJECT_DIR$/vehicleservice-webchat/src/main/resources/spring" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1052,8 +940,23 @@
       <workItem from="1524706597285" duration="403000" />
       <workItem from="1524710581417" duration="15815000" />
       <workItem from="1524733083750" duration="4984000" />
-      <workItem from="1524793659229" duration="16020000" />
+      <workItem from="1524793659229" duration="16436000" />
     </task>
+    <task id="LOCAL-00001" summary="integrate redis">
+      <created>1524819352003</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524819352003</updated>
+    </task>
+    <task id="LOCAL-00002" summary="integrate redis">
+      <created>1524819834244</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524819834244</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1089,7 +992,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57315000" />
+    <option name="totallyTimeSpent" value="57731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
@@ -1117,7 +1020,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6462197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20833333" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20761494" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -1135,6 +1038,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="integrate redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate redis" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="5" />
@@ -1146,13 +1053,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vehicleservice-common/src/main/java/com/bmw/vehicleservice/service/HttpClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vehicleservice-common/src/main/java/com/bmw/vehicleservice/utils/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1452">
@@ -1464,8 +1364,8 @@
         <state relative-caret-position="90">
           <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
           <folding>
-            <element signature="e#2536#2537#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2536#2537#0" expanded="false" />
+            <element signature="e#2580#2581#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1498,8 +1398,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vehicleservice-webchat/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding />
         </state>
       </provider>
