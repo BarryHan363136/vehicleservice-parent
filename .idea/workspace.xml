@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da850d2c-7841-46af-ac8d-8a6f463e1d92" name="Default" comment="integrate redis">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/src/main/java/com/bmw/vehicleservice/config/RedisConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/src/main/java/com/bmw/vehicleservice/service/RedisService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-redis/src/main/java/com/bmw/vehicleservice/service/impl/RedisServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicleservice-webchat/src/test/java/com/bmw/vehicleservice/service/RedisServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/com/bmw/vehicleservice/entity/User.class" afterPath="$PROJECT_DIR$/vehicleservice-webchat/target/classes/com/bmw/vehicleservice/entity/User.class" />
+    <list default="true" id="da850d2c-7841-46af-ac8d-8a6f463e1d92" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -86,6 +80,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -940,7 +939,7 @@
       <workItem from="1524706597285" duration="403000" />
       <workItem from="1524710581417" duration="15815000" />
       <workItem from="1524733083750" duration="4984000" />
-      <workItem from="1524793659229" duration="16436000" />
+      <workItem from="1524793659229" duration="16506000" />
     </task>
     <task id="LOCAL-00001" summary="integrate redis">
       <created>1524819352003</created>
@@ -956,7 +955,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524819834244</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="integrate redis">
+      <created>1524819972343</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524819972343</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -992,7 +998,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57731000" />
+    <option name="totallyTimeSpent" value="57801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
