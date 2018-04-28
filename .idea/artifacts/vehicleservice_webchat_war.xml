@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="vehicleservice-webchat:war">
-    <output-path>$PROJECT_DIR$/vehicleservice-webchat/target</output-path>
-    <root id="archive" name="webchat.war">
-      <element id="artifact" artifact-name="vehicleservice-webchat:war exploded" />
-    </root>
-  </artifact>
-</component>

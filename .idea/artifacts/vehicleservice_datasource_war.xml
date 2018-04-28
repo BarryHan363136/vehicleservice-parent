@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="vehicleservice-datasource:war">
-    <output-path>$PROJECT_DIR$/vehicleservice-datasource/target</output-path>
-    <root id="archive" name="vehicleservice-datasource-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="vehicleservice-datasource:war exploded" />
-    </root>
-  </artifact>
-</component>

@@ -20,14 +20,14 @@ public class UserController {
 
     @RequestMapping(value="/findUser/{userId}", method = RequestMethod.GET)
     public User findUser(@PathVariable("userId") String userId) {
-        logger.debug("into UserController getUserInfo ...");
+        logger.info("into UserController getUserInfo ...");
         User user = userService.getUserById(userId);
         return user;
     }
 
     @RequestMapping(value="/getUserInfo")
     public User getUserInfo(HttpServletRequest request) {
-        logger.debug("into UserController getUserInfo ...");
+        logger.info("into UserController getUserInfo ...");
         User user = userService.getUserById(request.getParameter("userId"));
         return user;
     }
