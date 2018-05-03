@@ -123,6 +123,7 @@ public class RedisConfiguration {
         redisTemplate.setHashKeySerializer(stringRedisSerializer());
         redisTemplate.setHashValueSerializer(new JdkSerializationRedisSerializer());
         redisTemplate.afterPropertiesSet();
+        logger.info("<=============redis初始化完成=====================>");
         return redisTemplate;
     }
 
