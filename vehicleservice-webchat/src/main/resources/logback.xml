@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <property scope="context" name="LOCAL_LOG_FOLDER" value="/Users/hantongshan/workspace-directory/logs/vehicleservice-webchat" />
     <property scope="context" name="SUB_SYSTEM" value="webchat" />
 
     <if condition='isDefined("catalina.base")'>
@@ -12,7 +13,7 @@
                     <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                         <maxFileSize>100MB</maxFileSize>
                     </timeBasedFileNamingAndTriggeringPolicy>
-                    <maxHistory>7</maxHistory>
+                    <!--<maxHistory>7</maxHistory>-->
                 </rollingPolicy>
                 <encoder>
                     <pattern>%d{HH:mm:ss.SSS} {%t} %-5level [webchat] %logger - %msg%n</pattern>
@@ -31,10 +32,30 @@
               class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
     </appender>
 
+    <appender name="MONITORLOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOCAL_LOG_FOLDER}/weather-statistic.csv</file>
+        <append>true</append>
+        <rollingPolicy name="file" class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOCAL_LOG_FOLDER}/webchat-statistic.%d{yyyy-MM}-%i.zip</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+            <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!--<maxHistory>7</maxHistory>-->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd|HH:mm:ss}|%m%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="MONITORLOGTOCSV" additivity="false" level="INFO">
+        <appender-ref ref="MONITORLOGFILE" />
+    </logger>
+
+
     <root level="${logback.log.level}">
         <appender-ref ref="FILE" />
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="aiAppender" />
+        <appender-ref ref="MONITORLOGFILE" />
     </root>
 
     <!--
