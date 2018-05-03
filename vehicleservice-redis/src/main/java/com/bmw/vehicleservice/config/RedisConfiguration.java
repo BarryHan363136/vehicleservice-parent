@@ -1,8 +1,6 @@
 package com.bmw.vehicleservice.config;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +16,9 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
-
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * 描述: Redis服务配置
  *

@@ -16,6 +16,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,6 +30,7 @@ import java.util.Properties;
  * @create 2018-04-26 上午11:13
  */
 @Configuration
+@EnableTransactionManagement
 public class DataSourceConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(DataSourceConfiguration.class);
