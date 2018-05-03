@@ -33,10 +33,10 @@
     </appender>
 
     <appender name="MONITORLOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOCAL_LOG_FOLDER}/weather-statistic.csv</file>
+        <file>${catalina.base}/logs/weather-statistic.csv</file>
         <append>true</append>
         <rollingPolicy name="file" class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${LOCAL_LOG_FOLDER}/webchat-statistic.%d{yyyy-MM}-%i.zip</FileNamePattern>
+            <FileNamePattern>${catalina.base}/logs/webchat-statistic.%d{yyyy-MM}-%i.zip</FileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
             <maxFileSize>100MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
@@ -54,7 +54,6 @@
         <appender-ref ref="FILE" />
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="aiAppender" />
-        <appender-ref ref="MONITORLOGFILE" />
     </root>
 
     <!--
