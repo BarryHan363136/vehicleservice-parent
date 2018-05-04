@@ -36,12 +36,13 @@ public class UserController {
 
     @RequestMapping(value="/getUserInfo")
     public User getUserInfo(HttpServletRequest request) {
-        logger.info("into UserController getUserInfo ...");
-        logger.warn("===================>测试applicationInsights warn日志级别");
-        logger.warn("===================>测试语句,BMW");
+        logger.trace("=====================trace日志级别");
+        logger.debug("=====================debug日志级别");
+        logger.info("=====================info日志级别");
+        logger.warn("======================warn日志级别");
+        logger.error("=====================error日志级别");
         try {
             User user = userService.getUserById(request.getParameter("userId"));
-            Integer age = 1 / 0;
             return user;
         } catch (Exception e) {
             logger.error("测试方法出错,错误原因为 {} ", e);
