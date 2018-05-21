@@ -8,9 +8,11 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -29,11 +31,12 @@ import java.util.Properties;
  * @create 2018-04-26 上午11:13
  */
 @Configuration
-public class DataSourceConfiguration {
+public class DataSourceConfiguration implements EnvironmentAware {
 
     private static final Logger logger = LoggerFactory.getLogger(DataSourceConfiguration.class);
     public static final String PARAS_CONFIG_FILENAME = "application.properties";
     protected static final Properties properties = new Properties();
+    private Environment environment;
 
     /**
      * 数据源配置相关参数设置
@@ -52,45 +55,46 @@ public class DataSourceConfiguration {
     private String typeAliasesPackage;
     private String daoBasePackage;
 
-    public DataSourceConfiguration(){
-        logger.info("初始化数据源服务配置...");
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
+        logger.info("初始化数据源参数配置...");
         try {
-            /**
-             * 1.从系统环境变量中获取数据源配置参数，如果获取不到就从配置文件中获取
-             * */
-            Map<String,String> map = System.getenv();
-            this.driverClassName = map.get("jdbc.driverClassName");
-            this.driverUrl = map.get("jdbc.url");
-            this.driverUsername = map.get("jdbc.username");
-            this.driverPassword = map.get("jdbc.password");
-            this.initialSize = StringUtils.isNotBlank(map.get("jdbc.initialsize")) ? Integer.parseInt(map.get("jdbc.initialsize")) : 10;
-            this.minIdle = StringUtils.isNotBlank(map.get("jdbc.minidle")) ? Integer.parseInt(map.get("jdbc.minidle")) : 10;
-            this.maxActive = StringUtils.isNotBlank(map.get("jdbc.maxactive")) ? Integer.parseInt(map.get("jdbc.maxactive")) : 100;
-            this.typeAliasesPackage = StringUtils.isNotBlank(map.get("mybatis.entityScannerPath")) ? map.get("mybatis.entityScannerPath") : "com.bmw.vehicleservice.entity";
-            this.mapperLocations = StringUtils.isNotBlank(map.get("mybatis.mappingsScannerPath")) ? map.get("mybatis.mappingsScannerPath") : "classpath:com/bmw/vehicleservice/mappings/*.xml";
-            this.daoBasePackage = StringUtils.isNotBlank(map.get("mybatis.daoScannerPath")) ? map.get("mybatis.daoScannerPath") : "com.bmw.vehicleservice.mapper";
-            /**
-             * 2.从配置文件中获取数据源配置参数
-             * */
-            if (StringUtils.isBlank(driverClassName) ||
-                    StringUtils.isBlank(driverUrl) ||
-                    StringUtils.isBlank(driverUsername) ||
-                    StringUtils.isBlank(driverPassword) || StringUtils.isBlank(typeAliasesPackage) ||
-                    StringUtils.isBlank(mapperLocations) || StringUtils.isBlank(daoBasePackage)){
-                logger.warn("<=====从配置文件中获取数据源配置参数,系统环境变量未设置数据源参数!!!=====>");
-                InputStream in = this.getClass().getClassLoader().getResourceAsStream(PARAS_CONFIG_FILENAME);
-                if (in!=null){
-                    properties.load(in);
-                }
-                this.driverClassName = properties.getProperty("jdbc.driverClassName");
-                this.driverUrl = properties.getProperty("jdbc.url");
-                this.driverUsername = properties.getProperty("jdbc.username");
-                this.driverPassword = properties.getProperty("jdbc.password");
+        /**
+         * 1.从系统环境变量中获取数据源配置参数，如果获取不到就从配置文件中获取
+         * */
+        this.driverClassName = environment.getProperty("jdbc.driverClassName");
+        this.driverUrl = environment.getProperty("jdbc.url");
+        this.driverUsername = environment.getProperty("jdbc.username");
+        this.driverPassword = environment.getProperty("jdbc.password");
+        this.initialSize = StringUtils.isNotBlank(environment.getProperty("jdbc.initialsize")) ? Integer.parseInt(environment.getProperty("jdbc.initialsize")) : 10;
+        this.minIdle = StringUtils.isNotBlank(environment.getProperty("jdbc.minidle")) ? Integer.parseInt(environment.getProperty("jdbc.minidle")) : 10;
+        this.maxActive = StringUtils.isNotBlank(environment.getProperty("jdbc.maxactive")) ? Integer.parseInt(environment.getProperty("jdbc.maxactive")) : 100;
+        this.typeAliasesPackage = StringUtils.isNotBlank(environment.getProperty("mybatis.entityScannerPath")) ? environment.getProperty("mybatis.entityScannerPath") : "com.bmw.vehicleservice.entity";
+        this.mapperLocations = StringUtils.isNotBlank(environment.getProperty("mybatis.mappingsScannerPath")) ? environment.getProperty("mybatis.mappingsScannerPath") : "classpath:com/bmw/vehicleservice/mappings/*.xml";
+        this.daoBasePackage = StringUtils.isNotBlank(environment.getProperty("mybatis.daoScannerPath")) ? environment.getProperty("mybatis.daoScannerPath") : "com.bmw.vehicleservice.mapper";
+        /**
+         * 2.从配置文件中获取数据源配置参数
+         * */
+        if (StringUtils.isBlank(driverClassName) ||
+                StringUtils.isBlank(driverUrl) ||
+                StringUtils.isBlank(driverUsername) ||
+                StringUtils.isBlank(driverPassword) || StringUtils.isBlank(typeAliasesPackage) ||
+                StringUtils.isBlank(mapperLocations) || StringUtils.isBlank(daoBasePackage)){
+            logger.warn("<=====从配置文件中获取数据源配置参数,系统环境变量未设置数据源参数!!!=====>");
+            InputStream in = this.getClass().getClassLoader().getResourceAsStream(PARAS_CONFIG_FILENAME);
+            if (in!=null){
+                properties.load(in);
             }
+            this.driverClassName = properties.getProperty("jdbc.driverClassName");
+            this.driverUrl = properties.getProperty("jdbc.url");
+            this.driverUsername = properties.getProperty("jdbc.username");
+            this.driverPassword = properties.getProperty("jdbc.password");
+            }
+            logger.info("初始化数据源参数配置完成...");
         } catch (IOException e) {
-            logger.error("DataSourceConfiguration初始化失败 {} ", e);
+            logger.error("DataSourceConfiguration参数初始化失败 {} ", e);
         }
-
     }
 
     @Bean(name = "dataSource", initMethod = "init", destroyMethod = "close")
@@ -171,6 +175,7 @@ public class DataSourceConfiguration {
         scannerConfigurer.setBasePackage(this.daoBasePackage);
         return scannerConfigurer;
     }
+
 
 
 }

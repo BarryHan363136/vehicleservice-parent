@@ -6,8 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
@@ -16,7 +18,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.io.InputStream;
-import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -26,11 +27,12 @@ import java.util.Properties;
  * @create 2018-04-27 上午10:19
  */
 @Configuration
-public class RedisConfiguration {
+public class RedisConfiguration implements EnvironmentAware {
 
     private static final Logger logger = LoggerFactory.getLogger(RedisConfiguration.class);
     public static final String PARAS_CONFIG_FILENAME = "application.properties";
     protected static final Properties properties = new Properties();
+    private Environment environment;
 
     /**
      * Redis服务配置参数
@@ -42,19 +44,20 @@ public class RedisConfiguration {
     private Integer port;
     private String password;
 
-    public RedisConfiguration(){
-        logger.info("开始初始化redis服务化配置...");
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
+        logger.info("开始初始化redis配置参数...");
         try {
             /**
              * 1.从系统环境变量中获取redis配置参数，如果获取不到就从配置文件中获取
              * */
-            Map<String,String> map = System.getenv();
-            this.maxIdle = StringUtils.isNotBlank(map.get("redis.maxIdle")) ? Integer.parseInt(map.get("redis.maxIdle")) : 200;
-            this.maxWait = StringUtils.isNotBlank(map.get("redis.maxWait")) ? Long.valueOf(map.get("redis.maxWait")) : 1000;
-            this.testOnBorrow = StringUtils.isNotBlank(map.get("redis.testOnBorrow")) ? Boolean.valueOf(map.get("redis.testOnBorrow")) : true;
-            this.hostName = map.get("redis.addr");
-            this.port = StringUtils.isNotBlank(map.get("redis.port")) ? Integer.parseInt(map.get("redis.port")) : null;
-            this.password = map.get("redis.auth");
+            this.maxIdle = StringUtils.isNotBlank(environment.getProperty("redis.maxIdle")) ? Integer.parseInt(environment.getProperty("redis.maxIdle")) : 200;
+            this.maxWait = StringUtils.isNotBlank(environment.getProperty("redis.maxWait")) ? Long.valueOf(environment.getProperty("redis.maxWait")) : 1000;
+            this.testOnBorrow = StringUtils.isNotBlank(environment.getProperty("redis.testOnBorrow")) ? Boolean.valueOf(environment.getProperty("redis.testOnBorrow")) : true;
+            this.hostName = environment.getProperty("redis.addr");
+            this.port = StringUtils.isNotBlank(environment.getProperty("redis.port")) ? Integer.parseInt(environment.getProperty("redis.port")) : null;
+            this.password = environment.getProperty("redis.auth");
 
             if (StringUtils.isBlank(hostName) ||
                     StringUtils.isBlank(hostName) ||
@@ -72,6 +75,7 @@ public class RedisConfiguration {
                 this.port = StringUtils.isNotBlank(properties.getProperty("redis.port")) ? Integer.parseInt(properties.getProperty("redis.port")) : 6379;
                 this.password = properties.getProperty("redis.auth");
             }
+            logger.info("redis配置参数初始化完成...");
         } catch (Exception e) {
             logger.error("RedisConfiguration服务初始化失败 {} ", e);
         }
@@ -125,5 +129,6 @@ public class RedisConfiguration {
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
+
 
 }

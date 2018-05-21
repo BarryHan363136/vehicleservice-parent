@@ -25,7 +25,7 @@ public class UserServiceTest extends BaseTest {
     //@Ignore
     @Test
     public void testGetUserById(){
-        String userId = "001";
+        String userId = "0001";
         User user = userService.getUserById(userId);
         if (user!=null){
             logger.info("==============================>:"+ JsonUtils.writeObjectAsString(user));
